@@ -1,37 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Leaders</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Leaders</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
-<h1>The Leaders</h1>
-<button id="themeToggle">Alternar Tema</button>
+    <h1>The Leaders</h1>
+    <button id="toggleTheme">🌙 / ☀️</button>
 </header>
 
-<section>
-<h2>Missão</h2>
-<p>Facilitar sua organização.</p>
+<section class="container">
+    <h2>Missão</h2>
+    <p>Facilitar sua organização com soluções modernas e funcionais.</p>
 
-<h2>Visão</h2>
-<p>Ser referência em soluções organizacionais.</p>
+    <h2>Visão</h2>
+    <p>Ser referência nacional em inovação, organização e eficiência.</p>
 
-<h2>Valores</h2>
-<ul>
-<li>Inovação</li>
-<li>Transparência</li>
-<li>Organização</li>
-<li>Responsabilidade</li>
-</ul>
+    <h2>Valores</h2>
+    <ul>
+        <li>Inovação</li>
+        <li>Transparência</li>
+        <li>Responsabilidade</li>
+        <li>Organização</li>
+    </ul>
 
-<h2>Organograma</h2>
-<p>Rodrigo — Carol</p>
+    <h2>Organograma</h2>
+    <div class="org">
+        <div class="card">Rodrigo – Co-Fundador</div>
+        <div class="card">Carol – Co-Fundadora</div>
+    </div>
+
+    <h2>Formulário (Protótipo Funcional)</h2>
+    <form id="form">
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu email" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p id="msg"></p>
 </section>
 
 <script src="script.js"></script>
 </body>
-</html>
+</html></html>
