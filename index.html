@@ -1,40 +1,65 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>The Leaders — Agenda Digital</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar">
-    <h1 class="logo">📘 The Leaders</h1>
-    <button id="themeToggle" class="theme-btn" aria-pressed="false" title="Alternar tema">🌙</button>
-  </header>
 
-  <!-- Caixa de notificação (visual) -->
-  <div id="notify" class="notify" aria-live="polite" role="status"></div>
+<header class="topbar">
+  <h1 class="logo">📘 The Leaders</h1>
+  <button id="themeToggle" class="theme-btn">🌙</button>
+</header>
 
-  <main class="agenda-container">
-    <!-- Relógio & Despertador -->
-    <section class="clock-card panel">
-      <h2>🕒 Relógio — Horário de Brasília</h2>
-      <div id="clock" class="clock" aria-label="Horário de Brasília">00:00:00</div>
+<div id="notify" class="notify"></div>
 
-      <div class="alarm-area">
-        <label for="alarmHour">Hora:</label>
-        <select id="alarmHour" aria-label="Hora do despertador"></select>
-        :
-        <select id="alarmMinute" aria-label="Minuto do despertador"></select>
+<main class="container">
 
-        <button id="setAlarm" class="btn">Ativar</button>
-        <button id="clearAlarm" class="btn ghost">Cancelar</button>
-      </div>
-    </section>
+  <section class="clock-card card">
+    <h2>🕒 Relógio — Horário de Brasília</h2>
+    <div id="clock" class="clock">00:00:00</div>
 
-    <!-- Agenda / To-do -->
-    <section class="agenda-wrapper panel">
-      <h2>Agenda Digital Profissional</h2>
+    <div class="alarm-controls">
+      <select id="alarmHour"></select> :
+      <select id="alarmMinute"></select>
+      <button id="setAlarm" class="btn">Ativar</button>
+      <button id="clearAlarm" class="btn danger">Cancelar</button>
+    </div>
+  </section>
+
+  <section class="agenda card">
+    <h2>Agenda Digital</h2>
+    <div class="input-area">
+      <input id="taskInput" type="text" placeholder="Anote algo...">
+      <button id="addBtn" class="btn">Adicionar</button>
+    </div>
+    <ul id="taskList" class="task-list"></ul>
+
+    <div class="row">
+      <button id="clearDone" class="btn">Remover concluídas</button>
+      <button id="clearAll" class="btn danger">Limpar tudo</button>
+    </div>
+  </section>
+
+  <section class="info card">
+    <h2>Sobre a Empresa</h2>
+    <p><strong>Nome:</strong> The Leaders</p>
+    <p><strong>Missão:</strong> Facilitamos sua organização</p>
+    <p><strong>Serviço:</strong> Sistema de agendas digitais</p>
+    <p><strong>Funcionários:</strong> Rodrigo e Carol</p>
+  </section>
+
+</main>
+
+<!-- Áudios internos (funcionam no GitHub Pages) -->
+<audio id="clickSound" src="click.mp3" preload="auto"></audio>
+<audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>      <h2>Agenda Digital Profissional</h2>
       <p class="muted">Anote tarefas, compromissos e lembretes. Tudo salvo localmente no seu navegador.</p>
 
       <div class="input-area">
