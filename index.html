@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Leaders — Lista (protótipo)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">
+      <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="48" height="48" rx="10" fill="url(#g)"></rect>
+        <defs>
+          <linearGradient id="g" x1="0" x2="1">
+            <stop offset="0" stop-color="#ff7ab6"/>
+            <stop offset="1" stop-color="#7c5cff"/>
+          </linearGradient>
+        </defs>
+        <g transform="translate(6,7)" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 30V2h6l8 24h2V2h6v28" />
+        </g>
+      </svg>
+    </div>
+    <div>
+      <div class="title">The Leaders</div>
+      <div class="subtitle">Facilitar sua organização</div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button id="themeToggle" class="fancy-toggle" aria-pressed="false" title="Alternar tema">
+      <span class="sun">☀️</span><span class="moon">🌙</span>
+    </button>
+  </div>
+</header>
+
+<main class="container">
+  <section class="panel about">
+    <h2>Sobre • The Leaders</h2>
+    <p class="muted">Missão: <strong>Facilitar sua organização</strong>. Visão: Ser referência em soluções que otimizem o dia a dia. Valores: Inovação • Transparência • Organização • Responsabilidade.</p>
+    <div class="org">
+      <div class="person">Rodrigo<br><span class="muted">Co-fundador</span></div>
+      <div class="person">Carol<br><span class="muted">Co-fundadora</span></div>
+    </div>
+  </section>
+
+  <section class="panel todo">
+    <h2>Minha Lista — Protótipo</h2>
+    <form id="todoForm" class="todo-form">
+      <input id="taskInput" placeholder="O que você quer anotar?" aria-label="Nova tarefa" required>
+      <button type="submit" class="add-btn">Adicionar</button>
+    </form>
+
+    <ul id="tasks" class="tasks" aria-live="polite"></ul>
+
+    <div class="todo-controls">
+      <button id="clearDone" class="ghost">Remover concluídas</button>
+      <button id="clearAll" class="danger ghost">Limpar tudo</button>
+    </div>
+
+    <p class="muted small">Dica: as tarefas ficam salvas no seu navegador.</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div>The Leaders — Rodrigo & Carol • Protótipo funcional</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
